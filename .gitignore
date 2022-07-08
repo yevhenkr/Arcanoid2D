@@ -39,3 +39,8 @@ sysinfo.txt
 /Packages
 /Logs
 /Library
+/.idea
+/Plugins/Editor
+Assets/Plugins.meta
+*.meta
+*.dll
