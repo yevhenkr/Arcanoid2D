@@ -2,12 +2,13 @@
 
 public class GameController : MonoBehaviour
 {
-  [SerializeField] private ButtonController _buttonController;
   [SerializeField] private ObjectSpawner _objectSpawner;
+  [SerializeField] private UIManager _uiManager;
 
   private void Start()
   {
-    _buttonController.OnPushStart += CreateLevelOne;
+    _uiManager.OnPushStart += CreateLevelOne;
+    _uiManager.ShowStartMenuButtons();
   }
 
   private void CreateLevelOne()

@@ -333,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &442335595
 RectTransform:
   m_ObjectHideFlags: 0
@@ -397,8 +397,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1279308474}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+      - m_Target: {fileID: 637453351}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: PushStartButton
         m_Mode: 1
         m_Arguments:
@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 637453349}
   - component: {fileID: 637453348}
   - component: {fileID: 637453347}
+  - component: {fileID: 637453351}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -546,6 +547,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &637453351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637453346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a58088e5d229b448092136f6db9960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttonStart: {fileID: 442335594}
 --- !u!1 &1279308473
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,8 +711,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb4dd4334bf929e4db51c7b88c0f8c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buttonController: {fileID: 1279308474}
   _objectSpawner: {fileID: 117387030}
+  _uiManager: {fileID: 637453351}
 --- !u!4 &1768576186
 Transform:
   m_ObjectHideFlags: 0
