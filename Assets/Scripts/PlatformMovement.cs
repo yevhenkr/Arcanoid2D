@@ -5,25 +5,43 @@ using UnityEngine;
 public class PlatformMovement : MonoBehaviour
 {
    
-   [SerializeField] private float speed = 3f;
+   [SerializeField] private float speed = 8f;
+   private Rigidbody2D _rb;
+
+   private void Start()
+   {
+      _rb = GetComponent<Rigidbody2D>();
+   }
+
    private void FixedUpdate()
    {
       if (Input.GetKey("right"))
       {
-         float move = Input.GetAxis("Horizontal");
-         transform.position = Vector3.MoveTowards(transform.position, transform.position + (new Vector3(move, 0f, 0f)),
-            speed * Time.deltaTime);
+         float h = Input.GetAxisRaw("Horizontal");
+
+         // Set Velocity (movement direction * speed)
+         _rb.velocity = Vector2.right * h * speed;
       }if (Input.GetKey("left"))
       {
-         float move = Input.GetAxis("Horizontal");
-         transform.position = Vector3.MoveTowards(transform.position, transform.position - (new Vector3(-move, 0f, 0f)),
-            speed * Time.deltaTime);
+         float h = -1;Input.GetAxisRaw("Horizontal");
+         // Set Velocity (movement direction * speed)
+         _rb.velocity = Vector2.right * h * speed;
+         //PlatformMove(Vector2.left);
+      }
+      if (!Input.GetKey("right")&& !Input.GetKey("left"))
+      {
+         float h = -1;Input.GetAxisRaw("Horizontal");
+         // Set Velocity (movement direction * speed)
+         _rb.velocity = Vector2.zero * h * speed;
       }
    }
 
-   public void PlatformMove(float move)
+   public void PlatformMove(Vector2 side)
    {
-      transform.position = Vector3.MoveTowards(transform.position, transform.position + (new Vector3(move, 0f, 0f)),
-         speed * Time.deltaTime);
+      float h = Input.GetAxisRaw("Horizontal");
+
+      // Set Velocity (movement direction * speed)
+      _rb.velocity = side * h * speed;
    }
+  
 }
