@@ -15,5 +15,6 @@ public class GameController : MonoBehaviour
   {
     _objectSpawner.SpawnBall();
     _objectSpawner.SpawnPlatform();
+    _objectSpawner.GenerationMap();
   }
 }
