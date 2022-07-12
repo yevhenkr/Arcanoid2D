@@ -4,8 +4,8 @@ public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField]
     public GameObject tilePrefab;
-    [SerializeField]
-    public Transform firstBlockPos;
+    //[SerializeField]
+    //public Transform firstBlockPos;
     [SerializeField]
     public Vector2 mapSize;
     
@@ -25,10 +25,10 @@ public class ObjectSpawner : MonoBehaviour
          float xOffset = blockWidth + blockWidth/10;
          float yOffset = blockHeight + blockHeight/10;
          
-         var yPos = firstBlockPos.position.y;
+         var yPos = tilePrefab.GetComponent<Transform>().position.y;
          for (int x = 0; x < mapSize.x; x++)
          {
-             var xPos = firstBlockPos.position.x;
+             var xPos = tilePrefab.GetComponent<Transform>().position.x;
              for (int y = 0; y < mapSize.y; y++){
                  Vector2 tilePosition = new Vector2(xPos, yPos);
                  Instantiate(tilePrefab, tilePosition, Quaternion.Euler(Vector3.zero));
