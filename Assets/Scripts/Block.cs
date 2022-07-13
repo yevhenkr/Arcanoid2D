@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public event Action OnDestroy;
     void OnCollisionEnter2D(Collision2D col) {
+        OnDestroy?.Invoke();
         Destroy(this.gameObject);
     }
 }

@@ -2,6 +2,7 @@
 
 public class GameController : MonoBehaviour
 {
+  [SerializeField] private BlocksController _blocksController;
   [SerializeField] private ObjectSpawner _objectSpawner;
   [SerializeField] private UIManager _uiManager;
 
@@ -15,6 +16,6 @@ public class GameController : MonoBehaviour
   {
     _objectSpawner.SpawnBall();
     _objectSpawner.SpawnPlatform();
-    _objectSpawner.GenerationMap();
+    _blocksController.GenerationBlocks();
   }
 }
