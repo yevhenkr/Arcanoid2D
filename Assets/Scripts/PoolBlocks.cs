@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [AddComponentMenu("Pool/ObjectPooling ")]
-public class ObjectPooling : MonoBehaviour
+public class PoolBlocks : MonoBehaviour
 {
     List<Block> objects;
     	Transform objectsParent;
