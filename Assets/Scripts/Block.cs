@@ -1,11 +1,12 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    public event Action OnDestroy;
     void OnCollisionEnter2D(Collision2D col) {
-        OnDestroy?.Invoke();
-        Destroy(this.gameObject);
+        ReturnToPool();
+    }
+    
+    public void ReturnToPool () {
+        gameObject.SetActive (false);
     }
 }

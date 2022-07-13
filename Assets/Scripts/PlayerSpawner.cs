@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ObjectSpawner : MonoBehaviour
+public class PlayerSpawner : MonoBehaviour
 {
     public void SpawnBall()
     {

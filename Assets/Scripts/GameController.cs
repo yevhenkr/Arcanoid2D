@@ -3,7 +3,7 @@
 public class GameController : MonoBehaviour
 {
   [SerializeField] private BlocksController _blocksController;
-  [SerializeField] private ObjectSpawner _objectSpawner;
+  [SerializeField] private PlayerSpawner _objectSpawner;
   [SerializeField] private UIManager _uiManager;
 
   private void Start()
