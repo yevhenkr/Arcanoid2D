@@ -17,8 +17,8 @@ public static class PoolsManager
 	}
 	public static void Initialize(PoolPart[] newPools) {
 		pools = newPools; //заполняем информацию
-		objectsParent = new GameObject ();
-		objectsParent.name = "Pool"; //создаем на сцене объект Pool, чтобы не заслонять иерархию
+			objectsParent = new GameObject ();
+		objectsParent.name = $"Pool_" + newPools[0].name; //создаем на сцене объект Pool, чтобы не засорять иерархию
 		for (int i=0; i<pools.Length; i++) {
 			if(pools[i].prefab!=null) {  
 				pools[i].ferula = new PoolBlocks(); //создаем свой пул для каждого префаба
