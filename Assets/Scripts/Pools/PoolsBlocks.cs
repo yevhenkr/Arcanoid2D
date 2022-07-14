@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
-[AddComponentMenu("Pool/ObjectPooling ")]
+
+namespace Pools
+{
+	//[AddComponentMenu("Pool/ObjectPooling ")]
 public class PoolBlocks : MonoBehaviour
 {
     List<Block> objects;
@@ -32,4 +35,5 @@ public class PoolBlocks : MonoBehaviour
 	        AddObject(objects[0], objectsParent);
 	        return objects[objects.Count-1];
         }
+}
 }

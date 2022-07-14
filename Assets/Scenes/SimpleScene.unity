@@ -462,7 +462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 529832468}
-  - component: {fileID: 529832467}
+  - component: {fileID: 529832469}
   m_Layer: 0
   m_Name: PoolBlocks
   m_TagString: Untagged
@@ -470,18 +470,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &529832467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529832466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d202f77fffa3b4439c4553419f9c5be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &529832468
 Transform:
   m_ObjectHideFlags: 0
@@ -497,6 +485,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &529832469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529832466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d202f77fffa3b4439c4553419f9c5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects: []
+  objectsParent: {fileID: 0}
 --- !u!1 &637453346
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +782,7 @@ GameObject:
   - component: {fileID: 1116497770}
   - component: {fileID: 1116497769}
   m_Layer: 0
-  m_Name: PoolSetup
+  m_Name: SetupPools
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -802,7 +804,7 @@ MonoBehaviour:
   - name: block_blue
     prefab: {fileID: 526958698819522626, guid: 6da3e7466b3a3ae46a35a9dba75a1460, type: 3}
     count: 10
-    ferula: {fileID: 529832467}
+    ferula: {fileID: 0}
 --- !u!4 &1116497770
 Transform:
   m_ObjectHideFlags: 0

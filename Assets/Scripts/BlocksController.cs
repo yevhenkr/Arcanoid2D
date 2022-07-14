@@ -20,7 +20,7 @@ public class BlocksController : MonoBehaviour
             var xPos = blockPrefab.GetComponent<Transform>().position.x;
             for (int y = 0; y < mapBlocks.y; y++){
                 Vector2 tilePosition = new Vector2(xPos, yPos);
-                var bullet = PoolManager.GetObject ("block_blue", tilePosition, Quaternion.Euler(Vector3.zero));
+                var bullet = Pools.PoolsManager.GetObject (blockPrefab.name, tilePosition, Quaternion.Euler(Vector3.zero));
                 // var block = Instantiate(blockPrefab, tilePosition, Quaternion.Euler(Vector3.zero));
                 // block.GetComponent<Block>().OnDestroy += DestroyObjectEvent;
                 xPos += xOffset;

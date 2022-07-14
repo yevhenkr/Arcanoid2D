@@ -1,6 +1,8 @@
 using UnityEngine;
 
-public static class PoolManager
+namespace Pools
+{
+public static class PoolsManager
 {
 	private static PoolPart[] pools;
 	private static GameObject objectsParent;
@@ -40,4 +42,6 @@ public static class PoolManager
 		} 
 		return result; //если такого объекта нет в пулах, вернет null
 	}
+}
+
 }
