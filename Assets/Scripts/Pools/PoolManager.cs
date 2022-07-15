@@ -22,8 +22,7 @@ public static class PoolsManager
 		for (int i=0; i<pools.Length; i++) {
 			if(pools[i].prefab!=null) {  
 				pools[i].ferula = new PoolBlocks(); //создаем свой пул для каждого префаба
-				pools[i].ferula.Initialize(pools[i].count, pools[i].prefab, objectsParent.transform); 
-//инициализируем пул заданным количество объектов
+				pools[i].ferula.Initialize(pools[i].count, pools[i].prefab, objectsParent.transform); //инициализируем пул заданным количество объектов
 			}
 		}
 	}
