@@ -1,25 +1,24 @@
 ﻿using System;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField]
-    Counter counter;
+    public CounterPanel counter;
     public event Action OnPushStart;
 
 [SerializeField] GameObject _buttonStart;
 
 public void ShowStartMenuButtons()
 {
-    _buttonStart.active = true;
-}
+        _buttonStart.SetActive(true);
+        counter.ResetValue();
+    }
 
 public void PushStartButton()
 {
     OnPushStart?.Invoke();
     _buttonStart.active = false;
+
         counter.AddedCount();
 }
 
