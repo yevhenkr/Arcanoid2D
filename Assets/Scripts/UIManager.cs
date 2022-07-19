@@ -11,16 +11,16 @@ public class UIManager : MonoBehaviour
 public void ShowStartMenuButtons()
 {
         _buttonStart.SetActive(true);
-        counter.ResetValue();
+        counter.FerstStart();
     }
 
 public void PushStartButton()
 {
     OnPushStart?.Invoke();
     _buttonStart.active = false;
-
-        counter.AddedCount();
 }
-
-
+    public void CounterAddOne()
+    {
+        counter.AddedCount();
+    }
 }

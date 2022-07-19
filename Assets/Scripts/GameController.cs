@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
   private void Start()
   {
     _uiManager.OnPushStart += CreateLevelOne;
+    _objectSpawner.BallTouchedBlock += BallTouchBlock;
     _uiManager.ShowStartMenuButtons();
   }
 
@@ -18,4 +19,9 @@ public class GameController : MonoBehaviour
     _objectSpawner.SpawnPlatform();
     _blocksController.GenerationBlocks();
   }
+
+   private void BallTouchBlock()
+    {
+        _uiManager.CounterAddOne();
+    }
 }
